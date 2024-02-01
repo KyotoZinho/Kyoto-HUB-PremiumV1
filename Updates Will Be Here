@@ -1340,8 +1340,6 @@ end
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Lvl9999/AutoFarmer/main/Universal"))();
       end
       if getgenv().AutoFarmChade == "Baller" then
-    elseif
-      getgenv().AutoFarmChade == "Baller" then
       getgenv().AutoFarm = true -- Determinds if you want it off or on
 getgenv().Npc = {"Baller","Baller","Baller", "Baller","Baller"} -- List of Npcs. [So it goes in array it will solo all the npcs from the first named one to the last] -- Names can be shortened but be spesific
 
@@ -1367,8 +1365,6 @@ end
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Lvl9999/AutoFarmer/main/Universal"))();
     end
     if getgenv().AutoFarmChade == "Insane Knight" then
-    elseif
-      getgenv().AutoFarmCastle == "Insane Knight" then
       getgenv().AutoFarm = true -- Determinds if you want it off or on
 getgenv().Npc = {"Insane Knight","Insane Knight","Insane Knight", "Insane Knight","Insane Knight"} -- List of Npcs. [So it goes in array it will solo all the npcs from the first named one to the last] -- Names can be shortened but be spesific
 
@@ -1854,7 +1850,7 @@ SnowTab:AddButton({
     Callback = function()   
             if getgenv().AutoFarmSnow
         == "All Ore Monsters" then
-        getgenv().AutoFarm = true -- Determinds if you want it off or on
+        getgenv().AutoFarm = false -- Determinds if you want it off or on
 getgenv().Npc = {"Amethyst Monster","Ruby Monster","Jade Monster"} -- List of Npcs. [So it goes in array it will solo all the npcs from the first named one to the last] -- Names can be shortened but be spesific
 
 getgenv().Position = Vector3.new(0,nil,5) -- x y z but dont touch "nil" cause it does nothing, [5] is what determinds how far away behind npc. The lower value the closer to the npc max [1].
@@ -1932,6 +1928,32 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Lvl9999/AutoFarmer/ma
     if getgenv().AutoFarmSnow == "Amethyst Monster" then
       getgenv().AutoFarm = false -- Determinds if you want it off or on
 getgenv().Npc = {"Amethyst Monster","Amethyst Monster","Amethyst Monster", "Amethyst Monster","Amethyst Monster"} -- List of Npcs. [So it goes in array it will solo all the npcs from the first named one to the last] -- Names can be shortened but be spesific
+
+getgenv().Position = Vector3.new(0,nil,5) -- x y z but dont touch "nil" cause it does nothing, [5] is what determinds how far away behind npc. The lower value the closer to the npc max [1].
+getgenv().OffsetY = -1.5 -- Adjust this instead of the "nil".
+
+getgenv().MethodX = "Tween" -- MethodXs: ["Tween","Teleport"].
+getgenv().TweenDurationX = 0.15 -- 0.25 Recommended, The higher the value the more slower it becomes, 0.1 is almost like teleportion.
+
+getgenv().Press = function(v)
+    return game:GetService("VirtualInputManager"):SendKeyEvent(true, v, false, game);
+end
+
+getgenv().Unpress = function(v)
+    return game:GetService("VirtualInputManager"):SendKeyEvent(false, v, false, game);
+end
+
+getgenv().Attacking = function()
+    game:GetService("VirtualInputManager"):SendMouseButtonEvent(0, 0, 0, true, game, 1) -- Auto clicker [Better to use a remote event]
+    -- Your Attacking remote here or the things I listed below: [You can also put multiple buttons to press to do multiple attacks at once]
+end
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Lvl9999/AutoFarmer/main/Universal"))();
+      end
+    if getgenv().AutoFarmSnow
+        == "Jade Monster" then
+        getgenv().AutoFarm = false -- Determinds if you want it off or on
+getgenv().Npc = {"Jade Monster","Jade Monster","Jade Monster", "Jade Monster","Jade Monster"} -- List of Npcs. [So it goes in array it will solo all the npcs from the first named one to the last] -- Names can be shortened but be spesific
 
 getgenv().Position = Vector3.new(0,nil,5) -- x y z but dont touch "nil" cause it does nothing, [5] is what determinds how far away behind npc. The lower value the closer to the npc max [1].
 getgenv().OffsetY = -1.5 -- Adjust this instead of the "nil".
@@ -2531,64 +2553,6 @@ end
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Lvl9999/AutoFarmer/main/Universal"))();
     end
-    end
-})
-
-VolcanoTab:AddToggle({
-    Name = "Auto Magma Raid",
-    Default = false,
-    Callback = function(Value)
-      if Value == true then
-      getgenv().AutoFarm = true -- Determinds if you want it off or on
-getgenv().Npc = {"Little Shivering Doge","Wide Shivering Doge","Giant Shivering Doge"} -- List of Npcs. [So it goes in array it will solo all the npcs from the first named one to the last] -- Names can be shortened but be spesific
-
-getgenv().Position = Vector3.new(0,nil,5) -- x y z but dont touch "nil" cause it does nothing, [5] is what determinds how far away behind npc. The lower value the closer to the npc max [1].
-getgenv().OffsetY = -1.5 -- Adjust this instead of the "nil".
-
-getgenv().MethodX = "Tween" -- MethodXs: ["Tween","Teleport"].
-getgenv().TweenDurationX = 0.15 -- 0.25 Recommended, The higher the value the more slower it becomes, 0.1 is almost like teleportion.
-
-getgenv().Press = function(v)
-    return game:GetService("VirtualInputManager"):SendKeyEvent(true, v, false, game);
-end
-
-getgenv().Unpress = function(v)
-    return game:GetService("VirtualInputManager"):SendKeyEvent(false, v, false, game);
-end
-
-getgenv().Attacking = function()
-    game:GetService("VirtualInputManager"):SendMouseButtonEvent(0, 0, 0, true, game, 1) -- Auto clicker [Better to use a remote event]
-    -- Your Attacking remote here or the things I listed below: [You can also put multiple buttons to press to do multiple attacks at once]
-end
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Lvl9999/AutoFarmer/main/Universal"))();
-    end
-    if Value == false then
-  else
-    getgenv().AutoFarm = false -- Determinds if you want it off or on
-getgenv().Npc = {"Little Shivering Doge","Wide Shivering Doge","Giant Shivering Doge"} -- List of Npcs. [So it goes in array it will solo all the npcs from the first named one to the last] -- Names can be shortened but be spesific
-
-getgenv().Position = Vector3.new(0,nil,5) -- x y z but dont touch "nil" cause it does nothing, [5] is what determinds how far away behind npc. The lower value the closer to the npc max [1].
-getgenv().OffsetY = -1.5 -- Adjust this instead of the "nil".
-
-getgenv().MethodX = "Tween" -- MethodXs: ["Tween","Teleport"].
-getgenv().TweenDurationX = 0.15 -- 0.25 Recommended, The higher the value the more slower it becomes, 0.1 is almost like teleportion.
-
-getgenv().Press = function(v)
-    return game:GetService("VirtualInputManager"):SendKeyEvent(true, v, false, game);
-end
-
-getgenv().Unpress = function(v)
-    return game:GetService("VirtualInputManager"):SendKeyEvent(false, v, false, game);
-end
-
-getgenv().Attacking = function()
-    game:GetService("VirtualInputManager"):SendMouseButtonEvent(0, 0, 0, true, game, 1) -- Auto clicker [Better to use a remote event]
-    -- Your Attacking remote here or the things I listed below: [You can also put multiple buttons to press to do multiple attacks at once]
-end
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Lvl9999/AutoFarmer/main/Universal"))();
-      end
     end
 })
   

@@ -23,7 +23,7 @@ getgenv().AutoFarmVolcano = MobVolcano
 
 local PremiumTab = Window:MakeTab({
     Name = "Premium Functions",
-    Icon = "rbxassetid://4483345998",
+    Icon = "rbxassetid://7733765398",
     PremiumOnly = false
 })
 local section = PremiumTab:AddSection({
@@ -562,8 +562,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Lvl9999/AutoFarmer/ma
 
 
 local MiscTab = Window:MakeTab({
-    Name = "Player",
-    Icon = "rbxassetid://4483345998",
+    Name = "Misc",
+    Icon = "rbxassetid://7733917120",
     PremiumOnly = false
 })
 
@@ -571,7 +571,7 @@ local section = MiscTab:AddSection({
     Name = "Misc"
   })
 
-PlayerTab:AddButton({
+MiscTab:AddButton({
     Name = "Kyoto Fly GUI",
     Callback = function()     
       local main = Instance.new("ScreenGui")
@@ -1052,7 +1052,7 @@ end)
   })
 
 MiscTab:AddButton({
-	Name = "Bring Items",
+	Name = "Bring All Items",
 	Callback = function()
 local player = game.Players.LocalPlayer
 
@@ -1073,7 +1073,7 @@ local function bringToolsToCharacter()
 end
 
 bringToolsToCharacter()
-    end
+end
 })
 -- Sessao Do Castelo --
 
@@ -1081,7 +1081,7 @@ bringToolsToCharacter()
 
 local NerdTab = Window:MakeTab({
     Name = "Nerd Island",
-    Icon = "rbxassetid://4483345998",
+    Icon = "rbxassetid://7733954403",
     PremiumOnly = false
 })
 
@@ -1293,7 +1293,7 @@ NerdTab:AddButton({
 
 local ChadeTab = Window:MakeTab({
     Name = "Chade Island",
-    Icon = "rbxassetid://4483345998",
+    Icon = "rbxassetid://7734058345",
     PremiumOnly = false
   })
 
@@ -1501,7 +1501,7 @@ ChadeTab:AddButton({
 
 local SeaTab = Window:MakeTab({
     Name = "Sea",
-    Icon = "rbxassetid://4483345998",
+    Icon = "rbxassetid://7733911490",
     PremiumOnly = false
   })
 
@@ -1659,7 +1659,7 @@ SeaTab:AddButton({
 
 local SnowTab = Window:MakeTab({
     Name = "Snow Island",
-    Icon = "rbxassetid://4483345998",
+    Icon = "rbxassetid://7734059180",
     PremiumOnly = false
 })
 
@@ -2015,7 +2015,7 @@ SnowTab:AddButton({
 
 local DesertTab = Window:MakeTab({
     Name = "Desert Island",
-    Icon = "rbxassetid://4483345998",
+    Icon = "rbxassetid://8997387644",
     PremiumOnly = false
   })
 
@@ -2313,7 +2313,7 @@ DesertTab:AddButton({
 
 local VolcanoTab = Window:MakeTab({
     Name = "Magma Island",
-    Icon = "rbxassetid://4483345998",
+    Icon = "rbxassetid://7734084018",
     PremiumOnly = false
   })
 

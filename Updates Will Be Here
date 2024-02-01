@@ -30,31 +30,6 @@ local section = PremiumTab:AddSection({
     Name = "Premium"
 })
 
-PremiumTab:AddButton({
-	Name = "Get All Items In The Floor",
-	Callback = function()
-local player = game.Players.LocalPlayer
-
-local function bringToolsToCharacter()
-    local character = player.Character or player.CharacterAdded:Wait()
-    local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
-
-    for _, tool in pairs(game.Workspace:GetChildren()) do
-        if tool:IsA("Tool") then
-            local handle = tool:FindFirstChild("Handle") or tool:FindFirstChild("Grip") -- find the handle or grip of the tool
-            if handle then
-                handle.CFrame = humanoidRootPart.CFrame * CFrame.new(0, 3, 0) -- move the handle to an offset above the character
-            else
-                -- if no handle or grip is found, you may need to handle it differently based on the specific game and tool setup
-            end
-        end
-    end
-end
-
-bringToolsToCharacter()
-    end
-    })
-
 PremiumTab:AddToggle({
 	Name = "ESP All Players",
 	Default = false,
@@ -583,20 +558,17 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Lvl9999/AutoFarmer/ma
     end
 })
 
-
-})
-
 -- Sessao Do Player --
 
 
-local PlayerTab = Window:MakeTab({
+local MiscTab = Window:MakeTab({
     Name = "Player",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
-local section = PlayerTab:AddSection({
-    Name = "Player"
+local section = MiscTab:AddSection({
+    Name = "Misc"
   })
 
 PlayerTab:AddButton({
@@ -1079,6 +1051,30 @@ end)
     end
   })
 
+MiscTab:AddButton({
+	Name = "Bring Items",
+	Callback = function()
+local player = game.Players.LocalPlayer
+
+local function bringToolsToCharacter()
+    local character = player.Character or player.CharacterAdded:Wait()
+    local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+    for _, tool in pairs(game.Workspace:GetChildren()) do
+        if tool:IsA("Tool") then
+            local handle = tool:FindFirstChild("Handle") or tool:FindFirstChild("Grip") -- find the handle or grip of the tool
+            if handle then
+                handle.CFrame = humanoidRootPart.CFrame * CFrame.new(0, 3, 0) -- move the handle to an offset above the character
+            else
+                -- if no handle or grip is found, you may need to handle it differently based on the specific game and tool setup
+            end
+        end
+    end
+end
+
+bringToolsToCharacter()
+    end
+})
 -- Sessao Do Castelo --
 
 

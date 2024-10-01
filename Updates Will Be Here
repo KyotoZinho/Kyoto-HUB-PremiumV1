@@ -1,4 +1,4 @@
- local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/thanhdat4461/OrionMoblie/main/source')))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/thanhdat4461/OrionMoblie/main/source')))()
   local Window = OrionLib:MakeWindow({ Name = "Kyoto HUB | Premium", HidePremium = false,
     IntroText = "Kyoto HUB | Premium", SaveConfig = false, ConfigFolder = "OrionTest" })
 
@@ -13,7 +13,6 @@
   -- Funçoes --
 
   -- Sessao Premium --
-
 
   local PremiumTab = Window:MakeTab({
     Name = "Premium Functions",
@@ -1347,47 +1346,7 @@ MiscTab:AddDropdown({
       end)
     end
   })
-  local section = MiscTab:AddSection({
-    Name = "HelpFull"
-  })
-  MiscTab:AddButton({
-    Name = "Tribe Boost",
-    Callback = function()
-      local player = game.Players.LocalPlayer
-
-      local teamA = game.Teams["Chad Tribe"]
-      local teamB = game.Teams["Big Brain Tribe"]
-
-      for i = 1, 5 do
-        player.Team = teamA
-        wait(0.1) -- Wait for 1 second
-
-        player.Team = teamB
-        wait(0.1) -- Wait for 1 second
-      end
-    end
-  })
-
-  MiscTab:AddButton({
-    Name = "Instant Interact",
-    Callback = function()
-      -- Função para definir a duração da espera de todos os ProximityPrompts para 0
-local function setHoldDurationToZero()
-    -- Itera por todos os descendentes do Workspace
-    for _, descendant in ipairs(game.Workspace:GetDescendants()) do
-        -- Verifica se o descendente é um ProximityPrompt
-        if descendant:IsA("ProximityPrompt") then
-            -- Define a duração da espera para 0
-            descendant.HoldDuration = 0
-        end
-    end
-end
-
--- Chama a função
-setHoldDurationToZero()
-      end
-  })
-
+  
   MiscTab:AddButton({
     Name = "Bring All Items",
     Callback = function()
